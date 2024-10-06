@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySchool</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="logo" href="index.html">MySchool<span>.</span></a>
+        <ul class="menu-links">
+          <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+          <li><a href="#123">Головна</a></li>
+          <li><a href="#contacts-section">Контакти</a></li>
+          <li><a href="#course-section">Курси</a></li>          
+          <li><a href="https://cz.alg.academy/uavp" target="_blank">FAQ</a></li>
+        </ul>
+        <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+      </nav>
+    </header>
+
+    <section id="123" class="hero-section">
+      <div class="content">
+        <h2>Зробіть ваш перший крок в IT</h2>
+        <p>
+          Зробивши крок в IT, ви відкриваєте для себе світ інновацій, 
+          де можна працювати в різних напрямках, таких як розробка програмного
+          забезпечення, веб-дизайн, кібербезпека, аналіз даних та штучний інтелект.
+        </p>
+        <button onclick="document.querySelector('#info-section').scrollIntoView({ behavior: 'smooth' });">
+          Детальніше
+        </button>
+      </div>
+    </section>
+    
+    
+
+
+    <section id="info-section" class="info-section">
+      <div class="main-info">
+        <div class="info-content">
+          <h2>Суперсила для суперзавтра</h2>
+          <p>зі школою програмування для дітей від 8 до 17 років</p>
+          <button onclick="document.querySelector('#contacts-section').scrollIntoView({ behavior: 'smooth' });">Вперед!</button>
+        </div>
+        <div class="info-image">
+          <img src="image1.png" alt="Superpower for a Super Tomorrow">
+        </div>
+      </div>
+      <div class="info-details">
+        <div class="info-item">
+          <img src="info1.svg" alt="Teachers who love their subject">
+          <p>Вчителі, які люблять свій предмет і знають, як зацікавити дітей</p>
+        </div>
+        <div class="info-item">
+          <img src="info2.svg" alt="No more than 12 students in a group">
+          <p>Не більше 12 учнів у групі, щоб вчитель надавав кожному учневі необхідну підтримку</p>
+        </div>
+        <div class="info-item">
+          <img src="info3.svg" alt="Online or in school Algorithmics">
+          <p>Онлайн або в школі Algorithmics: ви самі вибираєте формат</p>
+        </div>
+        <div class="info-item">
+          <img src="info4.svg" alt="Courses for everyone">
+          <p>Курси для всіх: вашій дитині не потрібно мати досвід програмування чи "технічного мислення"</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="course-section" class="courses-section">
+      <h2>Виберіть курс, який підходить саме вам</h2>
+      <p>Діти можуть почати навчання в будь-якому віці. Закінчивши курс, вони можуть перейти до наступного, щоб продовжити навчання і поступово стати професійним розробником Python.</p>
+      <div class="courses-grid">
+        <div class="course-card">
+          <img src="images/visual_programming.svg" alt="Візуальне програмування">
+        </div>
+        <div class="course-card">
+          <img src="images/python_start.svg" alt="Python Start">
+        </div>
+        <div class="course-card">
+          <img src="images/graphic_design.svg" alt="Геймдизайн">
+        </div>
+        <div class="course-card">
+          <img src="images/graphic_design.svg" alt="Графічний дизайн">
+        </div>
+      </div>
+    </section>
+    
+    
+
+    <section id="contacts-section" class="contacts-section">
+      <div class="container">
+        <form>
+          <h1>Контактна форма</h1>
+          <input type="text" id="firstName" placeholder="Ім'я" required />
+          <input type="text" id="lastName" placeholder="Прізвище" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="mobile" placeholder="Мобільний телефон" required />
+          <h4>Введіть ваше повідомлення тут...</h4>
+          <textarea required></textarea>
+          <input type="submit" value="Надіслати запит" id="button" />
+        </form>
+      </div>
+    </section>
+
+    <script>
+      const header = document.querySelector("header");
+      const hamburgerBtn = document.querySelector("#hamburger-btn");
+      const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+      // При натискані на Menu в телефоному режимі - відкривається меню.
+      hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+      // При натискані на Сlose в телефоному режимі - закривалося меню.
+      closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+  </body>
+</html>
